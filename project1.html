@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Background color project </title>
+    <style>
+        #grey{
+            background-color: grey;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid;
+            
+        }
+        #yellow{
+            background-color: yellow;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid;
+        }
+        #red{
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid;
+        }
+        #green{
+            background-color: green;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid;
+        }
+        .h{
+            display: flex;
+
+            position: absolute;
+          top: 50%;
+           left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="h">
+        <span class="button" id="grey">
+        </span>
+        <span class="button" id="yellow">
+        </span>
+        <span class="button" id="red">
+        </span>
+        <span class="button" id="green">
+        </span>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.button')
+
+    const body = document.querySelector('body')
+
+    buttons.forEach( function(button) {
+        button.addEventListener('click' , function (e){
+          if(e.target.id === 'grey')
+          {body.style.backgroundColor = e.target.id; } 
+
+          if(e.target.id === 'yellow')
+          {body.style.backgroundColor = e.target.id; } 
+
+          if(e.target.id === 'green')
+          {body.style.backgroundColor = e.target.id; } 
+
+          if(e.target.id === 'red')
+          {body.style.backgroundColor = e.target.id; } 
+
+        })
+    })
+</script>
+</html>
